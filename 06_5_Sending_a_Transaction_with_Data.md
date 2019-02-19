@@ -12,7 +12,7 @@ $ sha256sum contract.jpg
 fe7f0a3b69f56ef2d055a78823ed3bd1422e46c3183658ea854253033ae0ccef  contract.jpg
 $ op_return_data="fe7f0a3b69f56ef2d055a78823ed3bd1422e46c3183658ea854253033ae0ccef"
 ```
-_What is an OP_RETURN?_ All Bitcoin transactions are built upon opcode scripts that we'll meet in the next chapter. The OP_RETURN is a simple  opcode that defines a transaction as invalid. Convention has resulted in it being used to embed data on the blockchain.
+_What is an OP_RETURN?_ All Dash transactions are built upon opcode scripts that we'll meet in the next chapter. The OP_RETURN is a simple  opcode that defines a transaction as invalid. Convention has resulted in it being used to embed data on the blockchain.
 
 ## Prepare Some Money
 
@@ -41,14 +41,14 @@ $ changeaddress=$(dash-cli getrawchangeaddress)
 
 ## Write A Raw Transaction
 
-You can now write a new rawtransaction with two outputs: one is your change address to get back (most of) your money, the other is a data address, which is the `bitcoin-cli` term for an OP_RETURN.
+You can now write a new rawtransaction with two outputs: one is your change address to get back (most of) your money, the other is a data address, which is the `dash-cli` term for an OP_RETURN.
 ```
-$ rawtxhex=$(bitcoin-cli -named createrawtransaction inputs='''[ { "txid": "'$utxo_txid'", "vout": '$utxo_vout' } ]''' outputs='''{ "data": "'$op_return_data'", "'$changeaddress'": 0.8995 }''')
+$ rawtxhex=$(dash-cli -named createrawtransaction inputs='''[ { "txid": "'$utxo_txid'", "vout": '$utxo_vout' } ]''' outputs='''{ "data": "'$op_return_data'", "'$changeaddress'": 0.8995 }''')
 ```
 
 Here's what that transaction actually looks like:
 ```
-$ bitcoin-cli -named decoderawtransaction hexstring=$rawtxhex 
+$ dash-cli -named decoderawtransaction hexstring=$rawtxhex 
 {
   "txid": "531660f9bcb2571b2b790ebe6e7b6ed40618f608f3f6722a511275257942790b",
   "hash": "531660f9bcb2571b2b790ebe6e7b6ed40618f608f3f6722a511275257942790b",
