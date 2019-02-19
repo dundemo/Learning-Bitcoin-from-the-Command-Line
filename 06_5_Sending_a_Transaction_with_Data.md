@@ -20,7 +20,7 @@ Your purpose in creating a data transaction isn't to send money to anyone, it's 
 
 Here's the standard setup:
 ```
-$ bitcoin-cli listunspent
+$ Dash-cli listunspent
 [
   {
     "txid": "4460175e8276d5a1935f6136e36868a0a3561532d44ddffb09b7cb878f76f927",
@@ -34,9 +34,9 @@ $ bitcoin-cli listunspent
   }
 ]
 
-$ utxo_txid=$(bitcoin-cli listunspent | jq -r '.[0] | .txid')
-$ utxo_vout=$(bitcoin-cli listunspent | jq -r '.[0] | .vout')
-$ changeaddress=$(bitcoin-cli getrawchangeaddress)
+$ utxo_txid=$(dash-cli listunspent | jq -r '.[0] | .txid')
+$ utxo_vout=$(dash-cli listunspent | jq -r '.[0] | .vout')
+$ changeaddress=$(dash-cli getrawchangeaddress)
 ```
 
 ## Write A Raw Transaction
