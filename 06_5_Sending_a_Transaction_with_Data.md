@@ -1,4 +1,4 @@
-# 6.5: Sending a Transaction with Data
+# 6.5: Sending a Transaction with Data in Dash
 
 > **NOTE:** This is a draft in progress, so that I can get some feedback from early reviewers. It is not yet ready for learning.
 
