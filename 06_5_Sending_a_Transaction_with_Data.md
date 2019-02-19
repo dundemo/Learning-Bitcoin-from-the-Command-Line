@@ -113,8 +113,8 @@ You can use an OP_RETURN opcode to store up to 80 bytes of data on the blockchai
 
 _What is the Power of OP_RETURN?_ The OP_RETURN opens up whole new possibilities for the blockchain, because you can embed data that proves that certain things happened at certain times. Various organizations have used OP_RETURNs for proof of existence, for copyright, for colored coins, and [for other purposes](https://en.bitcoin.it/wiki/OP_RETURN). Though 80 bytes might not seem a lot, it can be quite effective if OP_RETURNs are used to store hashes of the actual data. Then, you can prove the existence of your digital data by deminstrating that the hash of it matches the hash on the blockchain.
 
-Note that there is some controversy over using the Bitcoin blockchain in this way.
+Note that there is some controversy over using the Bitcoin dash in this way.
 
 ## What's Next?
 
-Move on to "Bitcoin Scripting" with [Chapter Seven: Introducing Bitcoin Scripts](07_0_Introducing_Bitcoin_Scripts.md).
+Move on to "Dash Scripting" with [Chapter Seven: Introducing Dash Scripts](07_0_Introducing_Dash_Scripts.md).
